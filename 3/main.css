@@ -1,0 +1,37 @@
+:root {
+    --foo: hue-rotate(360deg);
+    --bar: hue-rotate(360deg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica neue', sans-serif;
+}
+
+body {
+    background: #162e3e;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+    color: blue;
+    filter: var(--bar);
+}
+
+img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    filter: var(--foo);
+}
+
+footer {
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+    text-align: center;
+    color: blue;
+    filter: var(--bar);
+}
