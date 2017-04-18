@@ -92,6 +92,10 @@ main {
                 font-size: 35pt;
                 line-height: 82px;
             }
+            body main div.row section p.bracket {
+                line-height: 70px;
+                color: #524a4a;
+            }
 
 footer {
     display: block;
