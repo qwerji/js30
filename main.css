@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    filter: none;
+}
+
+body {
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+a {
+    color: #fc3668;
+}
+
+main {
+    margin: 30px auto;
+    width: 728px;
+    background: #dedede;
+    padding: 10px;
+}
+    main div.upper {
+        height: 548px;
+        border-bottom: 1px solid grey;
+        background: url(background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: white;
+    }
+        main div.upper div {
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.65);
+            display: block;
+            height: 235px;
+            position: relative;
+            top: calc(50% - 140px);
+        }
+            a.code {
+                text-align: center;
+                display: block;
+            }
+    main div.row {
+        display: flex;
+        justify-content: space-between;
+    }
+        main div.row h2 {
+            height: 50px;
+            line-height: 50px;
+            padding-left: 5px;
+        }
+        main div.row section {
+            color: #b4b4b4;
+            border: 2px solid #b4b4b4;
+            width: 100px;
+            height: 100px;
+            transition: .3s ease border;
+        }
+            main div.row a {
+                text-decoration: none;
+            }
+            main div.row section p:first-of-type {
+                font-size: 10pt;
+                background: #524a4a;
+                padding: 2px 5px;
+            }
+            main div.row section p:nth-of-type(2) {
+                width: 100%;
+                text-align: center;
+                font-size: 35pt;
+                line-height: 82px;
+            }
+
+footer {
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+
+div.dot {
+    background: #393131;
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+    margin: 5px auto 10px;
+}
+
+main div.row section.complete:hover {
+    border: 2px solid #f34051;
+}

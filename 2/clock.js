@@ -3,9 +3,9 @@ function Clock() {
     this.getTime = () => {
         const fullDate = new Date()
         const date = {
-            seconds: fullDate.getSeconds()+1,
-            minutes: fullDate.getMinutes()+1,
-            hours: fullDate.getHours()+1
+            seconds: fullDate.getSeconds(),
+            minutes: fullDate.getMinutes(),
+            hours: fullDate.getHours()
         }
         return date
     }
