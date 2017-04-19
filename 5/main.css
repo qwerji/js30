@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    font-family: 'Amatic SC', cursive;
+    font-size: 34pt;
+    color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+p, section {
+    cursor: pointer;
+}
+
+
+div.gallery {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+    div.gallery section {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        transition: 1s ease flex;
+        transition-timing-function: cubic-bezier(0.59,-0.26, 0.56, 1.11);
+        box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    }
+        div.gallery section.selected {
+            flex: 3.5;
+        }
+        body div.gallery section.selected p {
+            transform: none;
+            font-size: 94pt;
+        }
+        div.gallery section p:nth-of-type(1) {
+            transform: translateY(-100%);
+        }
+        div.gallery section p:nth-of-type(3) {
+            transform: translateY(100%);
+        }
+    div.gallery section:nth-of-type(1) {
+        background: url(images/bird.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    div.gallery section:nth-of-type(2) {
+        background: url(images/jack.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    div.gallery section:nth-of-type(3) {
+        background: url(images/duke.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    div.gallery section:nth-of-type(4) {
+        background: url(images/daftpunk.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    div.gallery section:nth-of-type(5) {
+        background: url(images/thundercat.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+        div.gallery section p {
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s ease transform, 1.3s ease font-size;
+        }
+            div.gallery section p:nth-of-type(2) {
+                font-size: 58pt;
+            }
+            div.gallery section.selected p:nth-of-type(1) {
+                font-size: 56pt;
+            }
+            div.gallery section.selected p:nth-of-type(3) {
+                font-size: 56pt;
+            }
