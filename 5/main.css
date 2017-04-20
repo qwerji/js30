@@ -71,14 +71,14 @@ div.gallery {
         background-size: cover;
     }
     div.gallery section:nth-of-type(4) {
-        background: url(images/daftpunk.jpg) no-repeat center center;
+        background: url(images/thundercat.jpg) no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
     }
     div.gallery section:nth-of-type(5) {
-        background: url(images/thundercat.jpg) no-repeat center center;
+        background: url(images/billie.jpg) no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
