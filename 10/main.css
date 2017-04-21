@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica-neue', sans-serif;
+}
+
+body {
+    background: #282835;
+}
+
+ul {
+    display: block;
+    width: 270px;
+    margin: 50px auto;
+    list-style-type: none;
+    background: #774c97;
+    padding: 2px;
+    border-radius: 5px;
+}
+    ul li {
+        height: 50px;
+        margin: 2px;
+        background: #4a087b;
+        border-radius: 5px;
+    }
+        ul li input[type='checkbox'] {
+            display: inline-block;
+            margin: 0 20px;
+            height: 50px;
+        }
+        ul li p {
+            display: inline-block;
+            width: 75%;
+            line-height: 50px;
+            vertical-align: top;
+            color: #eeeeee;
+        }
