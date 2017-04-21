@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | js30 | 8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h2 {
+            position: absolute;
+            pointer-events: none;
+            color: white;
+        }
+        select#glo {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        canvas {
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <h2>Draw!</h2>
+    <select name="glo" id="glo">
+        <option disabled>------- Global Composite Operation --------</option>
+        <option disabled>-- (Some don't work well with this sketch) --</option>
+        <option value="luminosity">luminosity</option>
+        <option value="color">color</option>
+        <option value="saturation">saturation</option>
+        <option value="hue">hue</option>
+        <option value="exclusion">exclusion</option>
+        <option value="difference">difference</option>
+        <option value="soft-light">soft-light</option>
+        <option value="hard-light">hard-light</option>
+        <option value="color-burn">color-burn</option>
+        <option value="color-dodge">color-dodge</option>
+        <option value="lighten">lighten</option>
+        <option value="darken">darken</option>
+        <option value="screen">screen</option>
+        <option value="multiply">multiply</option>
+        <option value="xor" selected>xor</option>
+        <option value="copy">copy</option>
+        <option value="lighter">lighter</option>
+        <option value="destination-atop">destination-atop</option>
+        <option value="destination-out">destination-out</option>
+        <option value="destination-in">destination-in</option>
+        <option value="destination-over">destination-over</option>
+        <option value="source-atop">source-atop</option>
+        <option value="source-out">source-out</option>
+        <option value="source-in">source-in</option>
+        <option value="source-over">source-over</option>
+    </select>
+    <script src="sketch.js"></script>
+</body>
+</html>
