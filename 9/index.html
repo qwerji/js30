@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | js30 | 9</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+    <pre class="prettyprint">
+
+    // Cool Dev Tools!
+    // bentswanson.com
+
+    // Open the console... 🔎
+
+    // 1 - Breakpoints
+    // In the console, right click an HTML Elt.
+    // > Break on...
+
+    // 2 - Interpolated console.log
+    const name = 'Ben'
+    console.log('Hello my name is %s!', name)
+    // Or
+    console.log(`Hello my name is ${name}!`)
+
+    // 3 - Styled console.log
+    console.log('%c 🐌', 'font-size: 50px; text-shadow: 1px 1px green;')
+
+    // 4 - Warning
+    console.warn('%c 💩', 'font-size: 50px;')
+
+    // 5 - Error
+    console.error('%c 🔥', 'font-size: 50px;')
+
+    // 6 - Info
+    console.info('This is informative.') // Not working for me...
+
+    // 6 - Assert
+    const bool = false
+    console.assert(bool,'Incorrect!')
+    console.assert(!bool,'Incorrect Again?')
+
+    // 7 - Clear
+    console.clear()
+    // Console was cleared
+
+    // 8 - Dir
+    const pre = document.getElementsByTagName('pre')[0]
+    console.log(pre) // 👎
+    console.dir(pre) // 👍
+
+    // 9 - Group
+    const beings = [{name:'Odie',race:'Puppy'},{name:'Frothgar',race:'Barbarian'}]
+    beings.forEach(being => {
+        if (being.name === 'Frothgar') {
+            console.groupCollapsed(being.name)
+        } else {
+            console.group(being.name)
+        }
+        console.log(`Meet ${being.name}`)
+        console.log(`${being.name} is a ${being.race}`)
+        console.groupEnd()
+    })
+
+    // 10 - Count
+    console.count('Hey hey')
+    console.count('Hey hey')
+    console.count('Hey hey hey')
+    console.count('Hey hey')
+    console.count('Hey hey')
+    console.count('Hey hey')
+    console.count('Hey hey')
+    console.count('Hey hey hey')
+
+    // 11 - Time
+    console.time('Fetched in')
+    console.log('Fetching: "https://api.github.com/users/qwerji"')
+    fetch('https://api.github.com/users/qwerji')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('Fetched in')
+            console.log(data)
+
+            // 12 - Table
+            console.table(beings)
+            
+        })
+
+    </pre><!--  /.prettyprint -->
+    <script src="script.js"></script>
+</body>
+</html>
