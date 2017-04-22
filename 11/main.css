@@ -1,0 +1,96 @@
+body {
+    background: url(./images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'helvetica-neue', sans-serif;
+}
+
+/* Video container */
+div.player-container {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    cursor: default;
+    overflow: hidden;
+    max-width: 750px;
+    position: relative;
+}
+    /* Video Element */
+    div.player-container video.player {
+        width: 100%;
+    }
+    /* Controls */
+    div.player-container div.controls-container {
+        background: darkslategrey;
+        opacity: 0.9;
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(90%);
+        transition: all .3s;
+    }
+        /* Scrubber container */
+        div.player-container div.controls-container div.scrubber-container {
+            background: rgba(0,0,0,0.3);
+            height: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+            /* Scrubber */
+            div.player-container div.controls-container div.scrubber-container div {
+                height: 100%;
+                background: green;
+                width: 0%;
+                transition: .2s ease-out width;
+            }
+        /* Play button */
+        div.player-container div.controls-container img.play,
+        div.player-container div.controls-container img.jump-forward,
+        div.player-container div.controls-container img.jump-backward {
+            display: inline-block;
+            width: 20px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+        }
+        div.player-container div.controls-container div.volume-container,
+        div.player-container div.controls-container div.speed-container {
+            background: rgba(0,0,0,0.3);
+            display: inline-block;
+            height: 38px;
+            width: 100px;
+            float: right;
+            padding: 1px;
+        }
+        div.player-container div.controls-container div.volume-container {
+            float: none;
+        }
+            div.player-container div.controls-container div.volume-container div.volume,
+            div.player-container div.controls-container div.speed-container div.speed {
+                height: 100%;
+                background: green;
+            }
+        div.player-container div.controls-container img.jump-forward,
+        div.player-container div.controls-container img.jump-backward {
+            float: right;
+        }
+        div.player-container div.controls-container input[type='range'] {
+            height: 10px;
+            vertical-align: top;
+            margin-top: 14px;
+        }
+
+div.player-container:hover div.controls-container {
+    transform: translateY(0);
+    height: 50px;
+    margin-bottom: 4px;
+}
+
