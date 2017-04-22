@@ -1,0 +1,16 @@
+* {
+    font-family: 'helvetica-neue', sans-serif;
+}
+
+body {
+    background: url(./background.png) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2, p, h4 {
+    color: white;
+    text-align: center;
+}
