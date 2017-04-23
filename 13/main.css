@@ -1,0 +1,34 @@
+body {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+    background: #464646;
+    font-family: 'helvetica-neue', sans-serif;
+    color: white;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+.slide-in {
+    opacity: 0;
+    transition: 1.3s ease-out opacity, 1.3s ease-out transform;
+}
+
+.left.slide-in {
+    float: left;
+    transform: translateX(-50%);
+}
+
+.right.slide-in {
+    float: right;
+    transform: translateX(50%);
+}
+
+img.slide-in.entered {
+    opacity: 1;
+    transform: translateX(0);
+}
