@@ -92,6 +92,7 @@ main {
                 font-size: 35pt;
                 line-height: 82px;
             }
+            body main div.row section p.equals,
             body main div.row section p.bracket,
             body main div.row section p.arrow {
                 line-height: 70px;
@@ -99,6 +100,10 @@ main {
             }
             body main div.row section p.arrow {
                 line-height: 75px;
+                font-size: 50pt;
+            }
+            body main div.row section p.equals {
+                line-height: 50px;
                 font-size: 50pt;
             }
 
