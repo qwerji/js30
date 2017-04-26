@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | js30 | 17</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Sorting Excluding Articles</h2>
+        <h3>Unsorted</h3>
+        <ul class="unsorted">
+            <li>Vanilla</li>
+            <li>The Mars Volta</li>
+            <li>Yellowjackets</li>
+            <li>King Gizzard & The Lizard Wizard</li>
+            <li>The Vanguard Jazz Orchestra</li>
+            <li>Queens Of The Stone Age</li>
+            <li>The Avalanches</li>
+            <li>A Tribe Called Quest</li>
+            <li>Khryo</li>
+            <li>Thundercat</li>
+            <li>The</li>
+        </ul>
+        <h3>Sorted</h3>
+        <ul class="sorted"></ul>
+    </div>
+    <pre class="prettyprint">
+
+    const unsortedListElt = document.querySelector('ul.unsorted'),
+        sortedListElt = document.querySelector('ul.sorted'),
+        children = [...unsortedListElt.children],
+        articles = ['the', 'a', 'an']
+
+    children.sort((a, b) => {
+        return sanitize(a.innerHTML) > sanitize(b.innerHTML) ? 1 : -1
+    })
+
+    children.forEach(li => {
+        const newLi = document.createElement('li')
+        newLi.innerHTML = li.innerHTML
+        sortedListElt.appendChild(newLi)
+    })
+
+    function sanitize(text) {
+        text = text.toLowerCase()
+        if (articles.includes(text)) {
+            return text
+        }
+        let newText = '',
+            articleExists = false
+        for (let i = 0; i < text.length; i++) {
+            newText += text[i]
+            if (!articleExists) {
+                if (articles.includes(newText)) {
+                    articleExists = true
+                    newText = ''
+                    i += 1
+                }
+            }
+        }
+        return newText
+    }
+
+    </pre>
+    <script src="sort.js"></script>
+</body>
+</html>
