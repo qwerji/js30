@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img.compass {
+    width: 40vh;
+    display: block;
+    margin: 10vh auto 10vh;
+    transition: 2s ease transform;
+    transform: rotate(-45deg);
+}
+
+h1.speed {
+    font-size: 100px;
+    text-align: center;
+}
+
+p {
+    font-size: 40px;
+    margin-top: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+h1, p {
+    text-shadow: 2px 2px 2px #000000;
+}
+
+select.compassStyle, select:focus {
+    color: black;
+    font-size: 30px;
+    margin: 30px auto 0;
+    display: block;
+}
