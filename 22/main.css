@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #434343;
+    color: white;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+}
+
+nav {
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+}
+    nav a {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+div.selector {
+    background: lightgreen;
+    position: absolute;
+    opacity: 0;
+    transition: .2s ease all;
+    z-index: -1;
+}
