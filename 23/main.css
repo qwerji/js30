@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+main.voicebox {
+    color: white;
+    width: 50%;
+    display: block;
+    margin: 16vh auto;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000000;
+}
+    main.voicebox h2 {
+        background: #8A2D37;
+        padding: 10px 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    main.voicebox #voices {
+        display: block;
+        margin: 3%;
+        width: 94%;
+        font-size: 15px;
+    }
+    main.voicebox label {
+        display: block;
+        margin-left: 3%;
+    }
+    main.voicebox input[type="range"] {
+        display: block;
+        margin: 3%;
+        width: 94%;
+    }
+    main.voicebox textarea {
+        display: block;
+        width: 94%;
+        margin: 3%;
+        height: 100px;
+        background: rgba(0,0,0,0.4);
+        color: white;
+        font-size: 18px;
+    }
+    main.voicebox button {
+        width: 40%;
+        margin: 5%;
+        font-size: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+    }
