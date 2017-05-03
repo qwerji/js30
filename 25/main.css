@@ -1,0 +1,22 @@
+body {
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 70%;
+    min-width: 660px;
+}
+
+div {
+    padding: 30px;
+}
+
+.one {
+    background: lightgreen;
+    margin-top: 20px;
+}
+.two {
+    background: lightblue;
+}
+.three {
+    background: lightyellow;
+}

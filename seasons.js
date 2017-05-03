@@ -25,3 +25,12 @@ switch (month) {
 
 document.querySelector('main div.upper').style.background = 
 document.body.style.background = `url(./images/${season}.jpg) no-repeat center center fixed`
+
+const complete = document.querySelectorAll('.complete')
+document.querySelector('.random').addEventListener('click', e => {
+    location.href = `http://js30.bentswanson.com/${randomInt(1, complete.length)}`
+})
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}

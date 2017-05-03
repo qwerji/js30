@@ -126,3 +126,11 @@ div.dot {
 main div.row section.complete:hover {
     border: 2px solid #f34051;
 }
+
+span.random {
+    cursor: pointer;
+}
+
+span.random:hover {
+    text-shadow: 1px 1px 1px #000000;
+}

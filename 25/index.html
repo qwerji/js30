@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | js30 | 25</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <pre class="prettyprint">
+
+    // Event Capture, Propagation, Bubbling and Once
+    // bentswanson.com
+
+    const divs = document.querySelectorAll('div'),
+        capture = document.querySelector('input[name="capture"]'),
+        stopPropagation = document.querySelector('input[name="stop-propagation"]'),
+        once = document.querySelector('input[name="once"]')
+
+    function logElement(e) {
+        console.log(this)
+        if (stopPropagation.checked) {
+            e.stopPropagation() // Stops bubbling, doesn't remove listener
+        }
+    }
+
+    function addEventListeners() {
+        divs.forEach(div => div.addEventListener('click', logElement, {
+            capture: capture.checked, // Triggers while bubbling down
+            once: once.checked        // Runs once, then removes the listener
+        }))
+    }
+
+    // Open the console, click addEventListeners(), and try clicking on each div
+    // Not only does it log the clicked element,
+    // but it logs it's parent elements as well!
+    // These events bubble up all the way to the body and the HTML tag
+
+    // Change the options around, and then click addEventListeners() to apply.
+    // You may have to refresh the page to reset
+
+    </pre>
+    <p>
+        <input type="checkbox" name="stop-propagation">
+        <label for="stop-propagation">Stop Propagation</label>
+    </p>
+    <p>
+        <input type="checkbox" name="capture">
+        <label for="capture">Capture</label>
+    </p>
+    <p>
+        <input type="checkbox" name="once">
+        <label for="once">Once</label>
+    </p>
+    <input type="button" value="addEventListeners()" onclick="addEventListeners()">
+    <input type="button" value="Refresh Page" onclick="window.location.reload()">
+    <div class="one">
+        <p>&lt;div class="one"></p>
+        <div class="two">
+            <p>&lt;div class="two"></p>
+            <div class="three">
+                <p>&lt;div class="three">&lt;/div></p>
+            </div>
+            <p>&lt;/div></p>
+        </div>
+        <p>&lt;/div></p>
+    </div>
+    <script src="events.js"></script>
+</body>
+</html>
