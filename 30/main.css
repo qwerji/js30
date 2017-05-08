@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background: peachpuff;
+    user-select: none;
+    height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 33px auto;
+    width: 625px;
+    cursor: default;
+}
+
+.score, .start {
+    border-radius: 5px;
+    background: seashell;
+}
+
+.score {
+    font-size: 50px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 20px;
+    width: 190px;
+    text-align: center;
+    cursor: default;
+}
+
+.start {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.hi-score {
+    font-size: 30px;
+}
+
+main {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url('./images/dirt.svg') bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url('./images/mole.svg') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+.start {
+    cursor: pointer;
+}
+
+.start:hover {
+    filter: brightness(.95);
+}
+
+.gameover {
+    display: none;
+    font-size: 150px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #000000;
+    opacity: 0;
+    width: 100%;
+    top: 175px;
+    text-align: center;
+    z-index: 2;
+    transition: .5s ease opacity;
+    animation-duration: 5s;
+    cursor: default;
+}
+
+@keyframes gameover {
+    0%   { opacity: 0; }
+    15%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.mallet {
+    cursor: url(./images/malletup.png), pointer;
+}
+.mallet:active {
+    cursor: url(./images/malletdown.png), pointer;
+}
