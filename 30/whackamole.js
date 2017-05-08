@@ -79,7 +79,10 @@ function hideMole(hole) {
 
 holes.forEach(hole => {
     hole.addEventListener('click', e => {
-        if (e.srcElement.className === 'mole' && hole.dataset.clickable === 'yes') {
+        if (e.srcElement.className === 'mole' &&
+            hole.dataset.clickable === 'yes' &&
+            e.isTrusted
+        ) {
             hole.dataset.clickable = 'no'
             hideMole(hole)
             score++
