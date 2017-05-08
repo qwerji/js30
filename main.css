@@ -90,23 +90,27 @@ main {
                 width: 100%;
                 text-align: center;
                 font-size: 35pt;
-                line-height: 82px;
+                color: #990027;
             }
-            body main div.row section p.equals,
             body main div.row section p.shadow,
             body main div.row section p.bracket,
             body main div.row section p.arrow {
                 line-height: 70px;
-                color: #524a4a;
             }
+            body main div.row section p.equals,
             body main div.row section p.shadow,
             body main div.row section p.arrow {
                 line-height: 75px;
                 font-size: 50pt;
             }
             body main div.row section p.equals {
-                line-height: 50px;
-                font-size: 50pt;
+                font-size: 40pt;
+            }
+            body main div.row section img {
+                display: block;
+                height: 60%;
+                margin: 0 auto;
+                margin-top: 9px;
             }
 
 footer {
