@@ -3,45 +3,49 @@
     padding: 0;
     font-family: "Helvetica Neue Light", sans-serif;
     font-weight: 300;
-    color: white;
 }
 
 body {
-    background: url(background.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: #323232;
 }
 
-.controls {
-    display: flex;
-    width: 100%;
+video {
+    width: 500px;
+    display: inline-block;
 }
-    .controls * {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-        font-size: 20px;
-    }
-    .controls p {
-        cursor: pointer;
-        background: rgba(255,255,255,0.1);
-        transition: .2s ease background;
-    }
-    .controls p:hover {
-        background: rgba(255,255,255,0.2)
-    }
-    .controls input {
-        width: 100%;
-        color: black;
-    }
 
-.display {
+main {
+    width: 537px;
     display: block;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 30px;
-    margin-top: calc(30vh);
-    pointer-events: none;
+    margin: 50px auto;
+}
+
+.speed {
+    display: inline-block;
+    border: 1px solid darkgrey;
+    width: 30px;
+    border-radius: 50px;
+    height: 200px;
+    cursor: pointer;
+    overflow: hidden;
+    background: lightgrey;
+}
+.speed:hover {
+    filter: brightness(1.1);
+}
+    .speed-value {
+        background: lightgreen;
+        height: 18%;
+        position: relative;
+    }
+        .speed-value p {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            font-size: 15px;
+            user-select: none;
+        }
+p.below {
+    bottom: -40px;
 }

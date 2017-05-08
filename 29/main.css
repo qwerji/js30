@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+body {
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+}
+    .controls * {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .controls p {
+        cursor: pointer;
+        background: rgba(255,255,255,0.1);
+        transition: .2s ease background;
+    }
+    .controls p:hover {
+        background: rgba(255,255,255,0.2)
+    }
+    .controls input {
+        width: 100%;
+        color: black;
+    }
+
+.display {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    margin-top: calc(30vh);
+    pointer-events: none;
+}
